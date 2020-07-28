@@ -35,6 +35,8 @@ namespace MedicalManagementSystem
             panel1.Show();
             panel2.Hide();
             panel3.Hide();
+            panel4.Hide();
+
         }
 
         private void btnAddDiagnosisInformation_Click(object sender, EventArgs e)
@@ -46,6 +48,8 @@ namespace MedicalManagementSystem
             panel1.Hide();
             panel2.Show();
             panel3.Hide();
+            panel4.Hide();
+
 
 
         }
@@ -59,6 +63,8 @@ namespace MedicalManagementSystem
             panel1.Hide();
             panel2.Hide();
             panel3.Show();
+            panel4.Hide();
+
 
             var context = new HospitalContext();
             var query = context.AddPatients.Join(context.PatientMores,
@@ -119,6 +125,11 @@ namespace MedicalManagementSystem
             lblAddDiagnosisInformation.ForeColor = Color.Black;
             lblPatientHistory.ForeColor = Color.Black;
             lblHospitalInformation.ForeColor = Color.LightPink;
+
+            panel1.Hide();
+            panel2.Hide();
+            panel3.Hide();
+            panel4.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -135,6 +146,7 @@ namespace MedicalManagementSystem
             panel1.Hide();
             panel2.Hide();
             panel3.Hide();
+            panel4.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
