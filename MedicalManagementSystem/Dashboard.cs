@@ -246,7 +246,8 @@ namespace MedicalManagementSystem
                 FullAddress = query.FullAddress,
                 Contact = query.Contact,
                 Age = query.Age,
-                Gender = query.BloodGroup,
+                Gender = query.Gender,
+                BloodGroup =  query.BloodGroup,
                 MajorDisease = query.MajorDisease
 
             });
