@@ -1,9 +1,6 @@
 namespace MedicalManagementSystem
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public partial class HospitalContext : DbContext
     {
@@ -14,7 +11,6 @@ namespace MedicalManagementSystem
 
         public virtual DbSet<AddPatient> AddPatients { get; set; }
         public virtual DbSet<PatientMore> PatientMores { get; set; }
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

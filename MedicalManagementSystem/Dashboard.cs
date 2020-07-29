@@ -127,18 +127,37 @@ namespace MedicalManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var name = txtName.Text;
-            var address = txtAddress.Text;
-            var contactNumber = Convert.ToInt64(txtContactNumber.Text);
-            var age = Convert.ToInt32(txtAge.Text);
-            var gender = cmbGender.Text;
-            var blood = txtBloodGroup.Text;
-            var majorDisease = txtMajorDisease.Text;
-            var pid = Convert.ToInt32(txtPatiendID.Text);
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Patient Name cannot be blank");
+            }
+            else if (string.IsNullOrWhiteSpace(txtContactNumber.Text) ||
+                     !txtContactNumber.Text.All(c => c >= '0' && c <= '9'))
+            {
+                MessageBox.Show("Please enter a valid Phone number for Contact Number. For Example 123456789");
+            }
+            else if (string.IsNullOrWhiteSpace(txtPatiendID.Text) ||
+                     !txtPatiendID.Text.All(c => c >= '0' && c <= '9'))
+            {
+                MessageBox.Show("PatientID must not be blank and must be a valid numerical value");
+            }
 
-            var addPatient = new TryAddPatient(name, address, contactNumber, age, gender, blood, majorDisease, pid);
+            else
+            {
+                var name = txtName.Text;
+                var address = txtAddress.Text;
+                var contactNumber = Convert.ToInt64(txtContactNumber.Text);
+                var age = Convert.ToInt32(txtAge.Text);
+                var gender = cmbGender.Text;
+                var blood = txtBloodGroup.Text;
+                var majorDisease = txtMajorDisease.Text;
+                var pid = Convert.ToInt32(txtPatiendID.Text);
 
-            PatientInformationClear();
+                var addPatient = new TryAddPatient(name, address, contactNumber, age, gender, blood, majorDisease, pid);
+
+                PatientInformationClear();
+            }
+            
         }
         public void PatientInformationClear()
         {
@@ -171,15 +190,20 @@ namespace MedicalManagementSystem
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrWhiteSpace(textBox1.Text))
+            if (!textBox1.Text.All(c => c >= '0' && c <= '9'))
+            {
+                MessageBox.Show("Please enter numerical value for Patient ID");
+            }
+            else if (!String.IsNullOrWhiteSpace(textBox1.Text))
             {
                 int patiendID = Convert.ToInt32(textBox1.Text);
                 var context = new HospitalContext();
                 var query = context.AddPatients.SingleOrDefault(c => c.pid == patiendID);
 
                 dataGridView1.DataSource = query != null ? GetPeople(query) : null;
-
             }
+
+            
         }
 
         private List<AddPatient> GetPeople(AddPatient query)
