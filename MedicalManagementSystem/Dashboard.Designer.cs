@@ -79,16 +79,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label19 = new System.Windows.Forms.Label();
             this.hospitalDataSet = new MedicalManagementSystem.HospitalDataSet();
             this.addPatientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addPatientsTableAdapter = new MedicalManagementSystem.HospitalDataSetTableAdapters.AddPatientsTableAdapter();
             this.patientMoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientMoresTableAdapter = new MedicalManagementSystem.HospitalDataSetTableAdapters.PatientMoresTableAdapter();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -638,6 +638,14 @@
             this.panel3.Size = new System.Drawing.Size(576, 407);
             this.panel3.TabIndex = 16;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 52);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(575, 355);
+            this.dataGridView2.TabIndex = 17;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -647,14 +655,6 @@
             this.label19.Size = new System.Drawing.Size(359, 32);
             this.label19.TabIndex = 0;
             this.label19.Text = "Full History of The Patient";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 52);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(575, 355);
-            this.dataGridView2.TabIndex = 17;
             // 
             // hospitalDataSet
             // 
@@ -688,6 +688,16 @@
             this.panel4.Size = new System.Drawing.Size(576, 407);
             this.panel4.TabIndex = 17;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(154, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(316, 34);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Hospital Incorporated";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -698,16 +708,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(154, 18);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(316, 34);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Hospital Incorporated";
             // 
             // Dashboard
             // 

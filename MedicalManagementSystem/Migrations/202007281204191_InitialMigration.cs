@@ -34,7 +34,6 @@
                         WardType = c.String(maxLength: 20),
                     })
                 .PrimaryKey(t => t.pid);
-            
         }
         
         public override void Down()

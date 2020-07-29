@@ -22,7 +22,7 @@ namespace MedicalManagementSystem.Migrations
                     Diagnosis = diagnosis,
                     Medicine = medicine,
                     Ward = ward,
-                    WardType = wardType,
+                    WardType = wardType
                 };
                 context.PatientMores.Add(patient);
                 context.SaveChanges();

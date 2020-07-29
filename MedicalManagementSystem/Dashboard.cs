@@ -50,8 +50,6 @@ namespace MedicalManagementSystem
             panel3.Hide();
             panel4.Hide();
 
-
-
         }
 
         private void btnPatientHistory_Click(object sender, EventArgs e)
@@ -93,28 +91,6 @@ namespace MedicalManagementSystem
             }
 
             dataGridView2.DataSource = list;
-
-            //var column = new List<string>();
-
-
-            //foreach (var obj in query)
-            //{
-            //    Console.WriteLine("{0} - {1}", obj.Age, obj.StandardName);
-            //}
-
-            //dataGridView2.DataSource = GetAllPeople(query);
-
-            //var con = new SqlConnection();
-            //con.ConnectionString = "data source = .\\SQLEXPRESS; database = Hospital; integrated security = True";
-
-            //var cmd = new SqlCommand();
-            //cmd.Connection = con;
-            //cmd.CommandText = "select * from AddPatients inner join PatientMores on AddPatients.pid = PatientMores.pid";
-            //var dataAdapter = new SqlDataAdapter(cmd);
-            //var dataSet = new DataSet();
-            //dataAdapter.Fill(dataSet);
-
-            //dataGridView2.DataSource = dataSet.Tables[0];
 
         }
 
@@ -198,41 +174,12 @@ namespace MedicalManagementSystem
             if (!String.IsNullOrWhiteSpace(textBox1.Text))
             {
                 int patiendID = Convert.ToInt32(textBox1.Text);
-
-                //var con = new SqlConnection();
-                //con.ConnectionString = "data source = .\\SQLEXPRESS; database = Hospital; integrated security = True";
-
-                //var cmd = new SqlCommand(){
-                //    Connection =  con, 
-                //    CommandText = "select * from AddPatients where pid = " + pid + ""
-                //};
-
-                //////cmd.Connection = con;
-                //////cmd.CommandText = "select * from AddPatients where pid = " + pid + "";
-                //var dataAdapter = new SqlDataAdapter(cmd);
-                //var dataSet = new DataSet();
-                //dataAdapter.Fill(dataSet);
-                //dataGridView1.DataSource = dataSet.Tables[0];
-
                 var context = new HospitalContext();
-
                 var query = context.AddPatients.SingleOrDefault(c => c.pid == patiendID);
 
-                if (query != null)
-                {
-                    dataGridView1.DataSource = GetPeople(query);
-                }
-                else
-                {
-                    dataGridView1.DataSource = null;
-                }
-
+                dataGridView1.DataSource = query != null ? GetPeople(query) : null;
 
             }
-
-
-
-
         }
 
         private List<AddPatient> GetPeople(AddPatient query)
@@ -247,11 +194,10 @@ namespace MedicalManagementSystem
                 Contact = query.Contact,
                 Age = query.Age,
                 Gender = query.Gender,
-                BloodGroup =  query.BloodGroup,
+                BloodGroup = query.BloodGroup,
                 MajorDisease = query.MajorDisease
 
             });
-
 
             return list;
 
