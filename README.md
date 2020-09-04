@@ -1,4 +1,7 @@
-# HospitalIncorporatedManagementSystem
+# Hospital Incorporated Management System
+
+## Screenshots
+ Included in screenshots folder.
 
 ## Description
  Writtten in C# .Net/Entity Framework and in Visual Studio. HospitalIncorporatedManagementSystem is a Medical System created for new patients. Add and display data in a GridView along with extra data entry available.
