@@ -116,9 +116,9 @@ namespace MedicalManagementSystem
         private void Dashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hospitalDataSet.PatientMores' table. You can move, or remove it, as needed.
-            this.patientMoresTableAdapter.Fill(this.hospitalDataSet.PatientMores);
+            //this.patientMoresTableAdapter.Fill(this.hospitalDataSet.PatientMores);
             // TODO: This line of code loads data into the 'hospitalDataSet.AddPatients' table. You can move, or remove it, as needed.
-            this.addPatientsTableAdapter.Fill(this.hospitalDataSet.AddPatients);
+            //this.addPatientsTableAdapter.Fill(this.hospitalDataSet.AddPatients);
             panel1.Hide();
             panel2.Hide();
             panel3.Hide();
