@@ -1,5 +1,8 @@
 # Hospital Incorporated Management System
 
+## Demo of usage
+![HospitalManagementSystem Demo](demo/demo.gif)
+
 ## Screenshots
  Included in screenshots folder.
 
